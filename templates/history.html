@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+.content {text-align: center;}
+
+table {width: 100%;}
+h1 {text-align: center;}
+</style>
+<body>
+<h1 class="w3-container w3-card w3-indigo"> Previous Input and Output history page </h1>
+<table width: 100%>
+{% for table in history %}
+               {{ table|safe}}
+          {% endfor %}
+</table>
+<p class="content">Sarath Asok Kumar &copy; 2021 University of Surrey</p>
+</body>
+</html>

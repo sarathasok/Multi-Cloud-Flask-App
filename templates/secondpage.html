@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+table {width: 100%;
+}
+td {text-align: center;}
+h1 {text-align: center;}
+.content {text-align: center;}
+</style>
+<head>
+
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+
+<script async src="/plotly.js"></script>
+</head>
+<body>
+<h1 class="w3-container w3-card w3-indigo">Output Page</h1>
+<div class="w3-cell-row">
+  <div class="w3-container w3-blue w3-cell">
+<h2>Given inputs</h2>
+<h3 >Resources: {{parallel}}</h3>
+<h3 >Shots:{{shots}}</h3>
+<h3 >Reporting Rate: {{r_rate}}</h3>
+<h3 >Matching digits: {{digits}}</h3>
+</div>
+<div class="w3-container w3-green w3-cell">
+<h2 >Output</h2>
+<h3 class="w3-container w3-deep-green">Estimated Pi value: {{est_pi}}</h3>
+<h3 class="w3-container w3-deep-green">Status: {{status}}</h3>
+</div>
+</div>
+
+<h3 class="content">Output Graph</h3>
+<script>
+var dat={{data}}
+var x={{x_axis}}
+var pie ={{fixed_pie}}
+</script>
+<div id='myDiv'>
+</div>
+
+{% for table in df %}
+               {{ table|safe}}
+          {% endfor %}
+<p class="content">Sarath Asok Kumar &copy; 2021 University of Surrey</p>
+</body>
+</html>
